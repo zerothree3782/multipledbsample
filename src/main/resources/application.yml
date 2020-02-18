@@ -1,0 +1,30 @@
+myconfig:
+  dbbaseMapperLocation: classpath*:mapper/*.xml
+spring:
+  datasource:
+    hikari1:
+      username: hhi
+      password: hhi
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://127.0.0.1:3306/hhi
+    hikari2:
+      username: hhi
+      password: hhi
+      driver-class-name: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://127.0.0.1:5432/hhi
+    hikari3:
+      username: sa
+      password: sa
+      driver-class-name: org.h2.Driver
+      jdbcUrl: jdbc:h2:mem:testdb
+      maxActive: 20
+      initialization-mode: always
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+logging:
+  level:
+    root: info

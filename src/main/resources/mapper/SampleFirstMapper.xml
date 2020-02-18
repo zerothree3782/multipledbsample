@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hhi.multipledbsample.repository.FirstRepository">
+    <insert id="insertFirst" parameterType="com.hhi.multipledbsample.dto.First">
+        insert into first values (#{first_name},#{first_number})
+    </insert>
+
+    <select id="selectAll" resultType="com.hhi.multipledbsample.dto.First">
+        select * from first
+    </select>
+</mapper>

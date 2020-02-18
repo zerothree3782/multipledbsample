@@ -1,0 +1,38 @@
+version: "3"
+services:
+  #  Create a service named db.
+  db:
+    #   Use the Docker Image postgres. This will pull the newest release.
+    image: "postgres"
+    #   Give the container the name my_postgres. You can changes to something else.
+    container_name: "postgres1"
+    #   Setup the username, password, and database name. You can changes these values.
+    environment:
+      - POSTGRES_USER=hhi
+      - POSTGRES_PASSWORD=hhi
+      - POSTGRES_DB=hhi
+    #   Maps port 5432 (localhost) to port 5432 on the container. You can change the ports to fix your needs.
+    ports:
+      - "5432:5432"
+    #   Set a volume some that database is not lost after shutting down the container.
+    #   I used the name postgres-data but you can changed it to something else.
+#    volumes:
+#      - ./postgres-data:/var/lib/postgresql/data
+  db2:
+  #   Use the Docker Image postgres. This will pull the newest release.
+    image: "mysql"
+      #   Give the container the name my_postgres. You can changes to something else.
+    container_name: "mysql1"
+      #   Setup the username, password, and database name. You can changes these values.
+    environment:
+      MYSQL_DATABASE: "hhi"
+      MYSQL_USER: "hhi"
+      MYSQL_PASSWORD: "hhi"
+      MYSQL_ROOT_PASSWORD: "hhi"
+    #   Maps port 5432 (localhost) to port 5432 on the container. You can change the ports to fix your needs.
+    ports:
+      - "3306:3306"
+      #   Set a volume some that database is not lost after shutting down the container.
+      #   I used the name postgres-data but you can changed it to something else.
+    #    volumes:
+    #      - ./postgres-data:/var/lib/postgresql/data
