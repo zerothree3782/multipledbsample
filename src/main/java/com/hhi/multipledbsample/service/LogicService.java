@@ -31,6 +31,6 @@ public class LogicService {
         third.setThird_number(31);
         firstRepository.insertFirst(first);
         secondRepository.insertSecond(second);
-        thirdRepository.insertThird(third);
+        //thirdRepository.insertThird(third);
     }
 }
